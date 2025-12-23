@@ -1,11 +1,15 @@
 #container {
-    /* display: flex; */
+    display: flex;
+    flex-wrap: wrap;
+    height: 520px;
+    width: 520px;
+    padding: 48px;
 }
 
 .square {
-    /* display: flex; */
-    background-color: none;
+    box-sizing: border-box;
+    height: calc(100%/16);
+    width: calc(100%/16);
     border: 1px solid black;
-    height: 32px;
-    width: 32px;
+    background-color: #ccc;
 }
