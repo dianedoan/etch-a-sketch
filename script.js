@@ -32,6 +32,21 @@ function changeGridSize() {
     // ask for number of squares per side for new grid
     let gridSize = prompt("Enter number of squares per side: ");
 
+    // ensure grid size entered is a number
+    gridSize = Number(gridSize);
+
+    // check if proper grid size is entered
+    if (!gridSize) {
+        alert("No number of squares per side entered. ")
+        return;
+    }
+
+    // set minimum and maximum grid size
+    if (gridSize < 1 || gridSize > 100) {
+        alert("The number of squares per side must be between 1 and 100.");
+        return;
+    }  
+
     // create grid with new size
     createGrid(gridSize);
 }
