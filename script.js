@@ -3,6 +3,9 @@ const container = document.querySelector("#container");
 const containerSize = 520;
 
 function createGrid(gridSize) {
+    // clear grid
+    container.innerHTML = "";
+
     // calculate square width/height
     const squareSize = containerSize / gridSize;
     const totalSquares = gridSize * gridSize; // n x n grid
@@ -25,4 +28,13 @@ function createGrid(gridSize) {
     }
 }
 
+function changeGridSize() {
+    // ask for number of squares per side for new grid
+    let gridSize = prompt("Enter number of squares per side: ");
+
+    // create grid with new size
+    createGrid(gridSize);
+}
+
+// set initial grid size to 16 x 16
 createGrid(16);
