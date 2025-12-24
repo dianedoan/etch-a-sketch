@@ -23,7 +23,13 @@ function createGrid(gridSize) {
         
         // add "hover" effect using event listeners
         square.addEventListener("mouseenter", () => {
-            square.style.backgroundColor = "#000";
+            // randomize RBG values of square
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            // set randomized RGB as square color
+            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         });
     }
 }
