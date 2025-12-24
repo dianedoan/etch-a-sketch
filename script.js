@@ -18,6 +18,9 @@ function createGrid(gridSize) {
         // set square width and height
         square.style.width  = `${squareSize}px`;
         square.style.height  = `${squareSize}px`;
+
+        // set initial opacity to 10%
+        square.style.opacity = 0.1;
     
         container.appendChild(square);
         
@@ -27,9 +30,15 @@ function createGrid(gridSize) {
             const r = Math.floor(Math.random() * 256);
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
-
             // set randomized RGB as square color
             square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+            // convert current opacity value of square to float
+            let currentOpacity = parseFloat(window.getComputedStyle(square).getPropertyValue("opacity"));
+            // increase opacity by 10% to a maximum of 100%
+            let newOpacity = Math.min(currentOpacity + 0.1, 1); 
+            // set new opacity of square
+            square.style.opacity = newOpacity;
         });
     }
 }
