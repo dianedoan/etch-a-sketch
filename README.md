@@ -1,2 +1,2 @@
 # Etch-a-Sketch
-This is a browser version of something between a sketchpad and an Etch-a-Sketch accessible at https://dianedoan.github.io/etch-a-sketch/. It is made as a project for The Odin Project that showcases various DOM manipulation skills learnt in the course.
+This is a browser version of something between a sketchpad and an Etch-a-Sketch accessible at https://dianedoan.github.io/odin-etch-a-sketch/. It is made as a project for The Odin Project that showcases various DOM manipulation skills learnt in the course.
